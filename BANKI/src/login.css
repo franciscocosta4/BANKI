@@ -1,0 +1,24 @@
+#corpo{
+    background-image: linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255));
+    width: 100%;
+    height: 1000px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+form{
+    width: 300px;
+    margin:200px auto;
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: 10px auto;
+    height: 30px;
+    width: 250px;
+}
