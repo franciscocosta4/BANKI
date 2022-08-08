@@ -7,29 +7,83 @@
     <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Tangerine">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-rel="stylesheet">      
-<link rel="preconnect" href="https://fonts.googleapis.com">
+rel="stylesheet">     
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">  
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:ital,wght@1,100&family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="login.css">
-<link rel="stylesheet" href="C:\code\BANKI">
+
+
     <title>Document</title>
 </head>
 <body id="corpo">
-    <form>
+    <div id='msgError'></div>
+    <div id='msgSuccess'></div>
+    <form name="f1" action="javascript:void(0);">
+    <header id="titulo">Banki</header>  
+ 
     <div>
-        <h3>Ainda não têm conta?</h3>
-        <a href="register.html" rel="next" > CRIE AQUI</a>
-    </div>    
-    <div>
-        <h3 id="titulo">Banki</h3>
-        <input type="text" placeholder="login" id="login">
-        <input type="password" placeholder="senha" id="senha">
+        <h3> LOGIN:</h3>
+        <div id='msgError'></div>
+    <div id='msgSuccess'></div> 
+        <input type="text"  id="gmail"  placeholder=" gmail" required>
+        <input type="password" placeholder="senha" id="senha" required>
+        <button id="botao" onclick='login()' >ENTRAR</button>
     </div>
-    <div>
-        <button onclick="logar()" >ENTRAR</button>
-    </div>
-</form> 
-   <script src="script.js"></script>
-</body>
-</html>   
+    <p>The gmail needs to have  more than 7 caracters.
+        And the password needs to have more than 5 caracters.
+    </p>
+ </form>
+</body> 
+<script  src="autenticacao.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script type="module" >
+
+    // Import the functions you need from the SDKs you need
+  
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+  
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+  
+    // TODO: Add SDKs for Firebase products that you want to use
+  
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+  
+    // Your web app's Firebase configuration
+  
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  
+    const firebaseConfig = {
+  
+      apiKey: "AIzaSyCdc3CYYtWKknpGUhLqTjCCbOTNVnHauiA",
+  
+      authDomain: "banki-9e32f.firebaseapp.com",
+  
+      databaseURL: "https://banki-9e32f-default-rtdb.europe-west1.firebasedatabase.app",
+  
+      projectId: "banki-9e32f",
+  
+      storageBucket: "banki-9e32f.appspot.com",
+  
+      messagingSenderId: "503145052564",
+  
+      appId: "1:503145052564:web:f7db9497edd3803200f781",
+  
+      measurementId: "G-49RZNS05DL"
+  
+    };
+  
+   
+    // Initialize Firebase
+  
+    const app = initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  
+  </script>
+   <script  src="script.js"></script>
+
+</html>
