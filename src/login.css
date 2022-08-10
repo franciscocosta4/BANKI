@@ -1,0 +1,67 @@
+#corpo{
+    background-image: linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255));
+    width: 100%;
+    height: 1000px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#titulo{
+    color: white;
+    margin: 10px auto;
+    font-family: Mulish ;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+
+h3{
+    color: white;
+    font-size: 25px;
+    font-family: Mulish;
+
+}
+
+p{
+    color: rgb(218, 218, 218);
+    display: block;
+    margin: 10px auto;
+    font-family: Mulish;  
+}
+
+form{
+    width: 300px;
+    margin:200px auto;
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: 10px auto;
+    height: 30px;
+    width: 250px;
+}
+
+#msgError{
+    margin: 10px auto;
+    display: none;
+    color: #ff0000;
+    background-color: #ffbbbb;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: Mulish;
+}
+#msgSuccess{
+    display: none;
+    margin: 10px auto;
+    color: #ffffff;
+    background-color: #66ff00;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: Mulish;
+}
