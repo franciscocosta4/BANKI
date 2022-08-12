@@ -15,11 +15,21 @@ rel="stylesheet">
 <link rel="stylesheet" href="welcome.css">
     <title>Document</title>
 </head>
-<section>
-<body>
-     <header id="titulo"  >welcome to banki</header>  
-<button   id="botaologin" onclick="redirectlogin()">LOGIN</button>
-<button   id="botaoregistro" onclick="redirectregister()">REGISTER</button>
+  <body>
+    <div class="nav">
+        <a href="">
+            <button id="botaotheme" >
+                <img   id="imgtheme" src="/assets/outline_toggle_off_white_24dp.png" alt="theme">
+        </button>
+    </a>
+        <a  href="https://github.com/franciscocosta4/BANKI"><img alt="github" id="imggithub" src="/assets/GitHub-Mark-Light-32px.png"></a>
+     </div>
+     <section> 
+      <h1 id="titulo"  >welcome to banki</h1>  
+      <button   id="botaologin" onclick="redirectlogin()">LOGIN</button>
+      <button   id="botaoregistro" onclick="redirectregister()">REGISTER</button>
+   </section>
+</body>
 <script>
     let botao = document.querySelector("#botaologin")
 
@@ -31,6 +41,4 @@ rel="stylesheet">
     }
 
 </script>
-</section>
-</body>
 </html>

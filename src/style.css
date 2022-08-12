@@ -1,0 +1,163 @@
+body{
+    /* background-image: url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg); */
+    /* background-image: linear-gradient(rgb(2, 77, 90), #7267CB); */
+    background-image: linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255));
+    height: 800px;
+}
+
+
+
+
+
+/* ^NAVIGATION TOP */
+.nav{
+    
+    overflow: hidden;
+    border-radius: 10px;
+    /* background-color: #90B8B5 ; */
+    background: rgba(100, 175, 185, 0.171) ;
+    box-shadow: rgb(2, 58, 68) 0px 4px 16px;
+    animation: fadeIn 1s ease-in both;
+    
+}
+
+
+.nav a {
+    float: left;
+    display: inline-flex;
+    padding: 20px 21px;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: mulish;
+  }
+
+  .nav-centro a {
+    border-radius: 3%;
+    padding: 13.5px 20px;
+    float: none;
+    position: absolute;
+    top: 5.6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+  }
+
+  .nav-direita a{
+    float: right;
+    
+  }
+
+.nav a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: rgb(2, 58, 68) 0px 4px 16px;
+  }
+
+  /* SECAO FUNCOES  */
+
+.secao{
+    overflow: hidden;
+    border-radius: 10px;
+    /* background-color: #90B8B5 ; */
+    background: rgba(100, 175, 185, 0.164) ;
+    box-shadow: rgb(2, 58, 68) 0px 4px 16px;
+    animation: fadeIn 1s ease-in both;
+    width: 92%;
+    height: 50%;
+    float: none;
+    margin: 50px auto;
+}  
+
+
+.secao  #ajuda{
+    display: inline-flex;
+    float: left;
+    margin: 40px auto;
+    font-family: mulish;
+    color: white;
+    font-size:24px;
+}
+.secao  #ajudar{
+    display: inline-flex;
+    float: left;
+    margin: 65px auto;
+    font-family: mulish;
+    color: white;
+    font-size:24px;
+    
+}
+.secao #botaopedirajuda {
+    float: right;
+    display: inline-flex;
+    margin: 38px 5%;
+    text-decoration: none;
+   
+  }
+
+
+  .secao #botaoajudar {
+    float: right;
+    display: inline-flex;
+    margin: 69px 5%;
+    text-decoration: none;
+   
+  }
+
+  .secao button{
+    border-radius: 4px;
+    height: 35px;
+    border: none;
+    box-shadow: rgb(2, 58, 68) 0px 4px 16px;
+  }
+
+/* FOOTER 'NEED HELP WITH BANKI' */
+.documentacao {
+    overflow: hidden;
+    border-radius: 10px;
+    border: none;
+    /* background-color: #90B8B5 ; */
+    background: rgba(167, 167, 167, 0.5) ;
+    /* background-color: 6E3; */
+    box-shadow: rgb(2, 58, 68) 0px 4px 16px;
+    animation: fadeIn 1s ease-in both;
+    width: 79%;
+    height: 10%;
+    float: none;
+    margin: 50px auto;
+}
+
+.documentacao a {
+    float: none;
+    display: inline-flex;
+    margin: 30px ;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: mulish;
+}
+
+
+
+/* RESPONSIVIDADE */
+ @media screen and (min-width: 535px) {
+
+    .secao{
+        position: relative;
+    } 
+
+
+   .secao   #ajudar{
+    bottom: 10px;
+    left: 0px;
+    position: absolute;
+   
+  }
+
+
+.secao #botaoajudar{
+    position: absolute;
+    float: right;
+    bottom: 13px;
+    right: 4px;
+    
+}
+} 
