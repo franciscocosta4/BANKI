@@ -81,7 +81,7 @@ botao.addEventListener('click', ()=>{
         console.log('antes')
         firebase.auth().signInWithEmailAndPassword(gmail.value, senha.value).then(response => {
             console.log('success', response)
-            alert("seria redirecionado agr")
+            window.location.href= 'index.html'
         }).catch(error => {
             alert(error)
             console.log('error', error)

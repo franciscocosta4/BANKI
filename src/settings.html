@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="corpo">
+      <h1>
+        SETTINGS
+      </h1>
+      <section>
+          <button id="botaobluetheme" >
+            <img   id="imgtheme" src="/assets/outline_toggle_off_white_24dp.png" alt="theme">
+          </button>
+      </section>
+</body>
+<script src="bluetheme.js"></script>
+<script>
+    var tecnicas = window.document.getElementById('tecnicas')
+    var corpo = window.document.getElementById('corpo')
+    if (localStorage.getItem("bluetheme") == "ligado") {
+       corpo.style.background = 'linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255))'
+       tecnicas.style.backgroundColor= '#211C1C'
+}
+else if (localStorage.getItem("bluetheme") == "desligado") {
+    corpo.style.background.Image= 'url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg)';
+   }
+        
+</script>
+</html>

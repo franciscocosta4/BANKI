@@ -15,7 +15,7 @@ rel="stylesheet">
 <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body id="corpo"  >
     <div class="nav">
         <a href="">
             ACCOUNT
@@ -26,25 +26,38 @@ rel="stylesheet">
          </a>
     </div>
         <div class="nav-direita">
-            <a href="">
+            <a href="settings.html">
                SETTINGS
             </a>
         </div>
      </div>
-     <section class="secao">
-        <p id="ajuda"  >NEED HELP?</p>
-            <button id="botaopedirajuda" >
-                ASK FOR SOME
-            </button>
-        <p id="ajudar" >
-            WANNA HELP<br> SOMEONE?
-        </p>
-            <button id="botaoajudar">
-                HELP SOMEONE
-            </button>
-     </section>
+     <div class="friends">
+        <h3>FRIENDS</h3>
+     </div>
+     <section class="funcoes">
+        
+         <button id="botaopedirajuda" >
+            ASK FOR SOME
+         </button>
+
+         <button id="botaoajudar">
+             HELP SOMEONE
+         </button>
+      </section>
      <footer class="documentacao">
         <a href="">NEED HELP WITH BANKI</a>
      </footer>
 </body>
+<script src="bluetheme.js"></script>
+<script>
+    var tecnicas = window.document.getElementById('tecnicas')
+    var corpo = window.document.getElementById('corpo')
+    if (localStorage.getItem("bluetheme") == "ligado") {
+       corpo.style.background = 'linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255))'
+       tecnicas.style.backgroundColor= '#211C1C'
+}
+else if (localStorage.getItem("bluetheme") == "desligado") {
+    corpo.style.background.Image= 'url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg)';
+   }
+</script>   
 </html>
