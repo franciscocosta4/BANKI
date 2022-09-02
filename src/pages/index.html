@@ -17,22 +17,28 @@ rel="stylesheet">
 </head>
 <body id="corpo"  >
     <div class="nav">
-        <a href="">
-            ACCOUNT
+        <a href="" id="conta">
+            <img   id="imgtheme" src="/assets/outline_face_white_24dp.png" alt="theme">
     </a>
     <div class="nav-centro">
         <a href="">
-            BANKI
+            <img   id="imgtheme" src="/assets/bankilogo.png" alt="theme">
          </a>
     </div>
         <div class="nav-direita">
             <a href="settings.html">
-               SETTINGS
+                <img   id="imgtheme" src="/assets/outline_settings_white_24dp.png" alt="theme">
             </a>
         </div>
      </div>
      <div class="friends">
         <h3>FRIENDS</h3>
+        <p>
+            Here are your friends:
+        </p>
+        <ul id="gmails">
+            
+        </ul>
      </div>
      <section class="funcoes">
         
@@ -48,16 +54,22 @@ rel="stylesheet">
         <a href="">NEED HELP WITH BANKI</a>
      </footer>
 </body>
-<script src="bluetheme.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="/src/firebase-init.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
+<script    src="/src/script.js"></script>
 <script>
-    var tecnicas = window.document.getElementById('tecnicas')
+   
     var corpo = window.document.getElementById('corpo')
+    
     if (localStorage.getItem("bluetheme") == "ligado") {
        corpo.style.background = 'linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255))'
-       tecnicas.style.backgroundColor= '#211C1C'
+      
 }
 else if (localStorage.getItem("bluetheme") == "desligado") {
     corpo.style.background.Image= 'url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg)';
    }
+  
 </script>   
 </html>

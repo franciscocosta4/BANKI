@@ -19,7 +19,7 @@ gmailregistro.addEventListener('keyup', () => {
       gmailregistro.setAttribute('style', 'color: #73ff00 ')
       gmailregistro.setAttribute('style','border-color: #73ff00')
   }
-  console.log('gmailregsitro:', gmailregistro )
+
 
 })
 
@@ -37,10 +37,10 @@ senharegistro.addEventListener('keyup', () => {
   else{
       botao.setAttribute('style','display: inline')
       msgError.setAttribute('style', 'display:none')
-      senharegsitro.setAttribute('style', 'color: #73ff00 ')
-      senharegsitro.setAttribute('style','border-color: #73ff00')
+      senharegistro.setAttribute('style', 'color: #73ff00 ')
+      senharegistro.setAttribute('style','border-color: #73ff00')
   }
-  console.log('senharegistro:', senharegistro )
+  
 })
 
 
@@ -71,23 +71,72 @@ botao.addEventListener('click', ()=>{
   console.log( 'gmailregistro:', gmailregistro)
 
 })
+//*FUNCAO GUardar O NOMES DO USUARIO NA DATABASE
+function savegmail(gmailregistro) {
+  // *get variables
+  var gmailregistro = document.getElementById("gmailregistro").value;
+  var nomeregistro = document.getElementById("nomeregistro").value;
+  // *save in database
+  firebase.database().ref('gmails').push(
+    gmailregistro,
+  );
+    //!ERRO ELE SUBSTITUI INVES DE ADICIONAR USUARIO //>RESOLVIDO
+ console.log(nomeregistro)
 
+  //* prevent form from submitting
+  return false;
+}
+
+
+//*FUNCAO GUARDAR O NOME DO USUARIO NA DATABASE
+  function savename(nomeregistro) {
+  var nomeregistro = document.getElementById("nomeregistro").value;
+  //* save in database
+    //TODO  ADICIONAR O NOME NO  USUARIO >FEITO
+  firebase.database().ref('nomeconta').set({
+    nomeregistro,
+  });
+ console.log('teu nome:',nomeregistro)
+ //* prevent form from submitting
+ return false;
+} 
+
+//*FUNCAO GUARDAR O NOMES DOS AMIGOS/USUARIOS NA DATABASE
+function savefriendsname(nomeregistro) {
+  var nomeregistro = document.getElementById("nomeregistro").value;
+  //* save in database
+    //TODO  ADICIONAR O NOME NO  USUARIO >FEITO
+  firebase.database().ref('nomes').push(
+    nomeregistro
+  );
+ console.log('nome na lista de usuarios:',nomeregistro)
+ //* prevent form from submitting
+ return false;
+}  
+
+//*FUNCAO REGISTRAR 
 function registrar(){
   console.log('antes')
 firebase.auth().createUserWithEmailAndPassword(gmailregistro.value, senharegistro.value)
 .then((userCredential) => {
-  // Signed in
   var user = userCredential.user;
-  // ...
+  //*console logs
   console.log(userCredential)
   console.log(' redirecionando para home')
   alert('registrado com sucesso')
   window.location.href= 'login.html'
+  
 })
 .catch((error) => {
   var errorCode = error.code;
   var errorMessage = error.message;
-  // ..
+  // *console logs
   console.log(errorMessage)
+  alert(errorMessage)
 });
 }
+
+
+
+
+

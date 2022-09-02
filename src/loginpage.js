@@ -75,6 +75,7 @@ botao.addEventListener('click', ()=>{
 })
 
 
+
  //funcao de login  
 
     function login() {  
@@ -82,6 +83,7 @@ botao.addEventListener('click', ()=>{
         firebase.auth().signInWithEmailAndPassword(gmail.value, senha.value).then(response => {
             console.log('success', response)
             window.location.href= 'index.html'
+            // window.location.href= 'index.html'
         }).catch(error => {
             alert(error)
             console.log('error', error)
@@ -91,7 +93,8 @@ botao.addEventListener('click', ()=>{
         });
         console.log('depois')
     } 
-    
-    
+
+
+  
       
    

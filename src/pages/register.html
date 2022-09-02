@@ -23,15 +23,17 @@ rel="stylesheet">
     <header id="titulo">Banki</header>   
     <div>
         <h3> Crie aqui a sua conta:</h3>
+        <input type="text"  id="nomeregistro"  placeholder="name" required>
         <input type="text"  id="gmailregistro"  placeholder=" gmail" required>
         <input type="password" placeholder="password" id="senharegistro" required>
-        <button id="botao" onclick="registrar()" >ENTRAR</button>
+        <button id="botao" onclick="registrar(),savegmail(),savename()"   >ENTRAR</button>
     </div>
     <p>Pressione 'Enter' após colocar suas credenciais para cadastrar você na app e o botao de entrada aparecer.</p>
 </form>
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="/src/firebase-init.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
-<script src="firebase-init.js"></script>
-<script src="register.js"></script>
+<script  src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
+<script src="/src/register.js"></script>
 </body>
 </html>

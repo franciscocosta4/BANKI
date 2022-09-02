@@ -2,7 +2,7 @@
 
 :root{
     --primary: rgba(0, 0, 0, 0.65);
-    --secundary: rgba(126, 30, 216, 0.65);
+    --secundary: rgba(76, 5, 143, 0.65);
   }
   #corpo{
       /* background-image: url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg); */
@@ -85,7 +85,7 @@ section{
     border-radius: 10px;
     /* background-color: #90B8B5 ; */
     background: rgba(255, 255, 255, 0.171) ;
-    box-shadow: rgba(92, 37, 194, 0.39) 0px 4px 16px;
+    /* box-shadow: rgba(92, 37, 194, 0.39) 0px 4px 16px; */
     animation: fadeIn 1s ease-in both;
     
 }

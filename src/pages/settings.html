@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">     
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:ital,wght@1,100&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="settings.css">
     <title>Document</title>
 </head>
 <body id="corpo">
@@ -16,13 +25,12 @@
           </button>
       </section>
 </body>
-<script src="bluetheme.js"></script>
+<script src="/src/bluetheme.js"></script>
 <script>
-    var tecnicas = window.document.getElementById('tecnicas')
     var corpo = window.document.getElementById('corpo')
     if (localStorage.getItem("bluetheme") == "ligado") {
        corpo.style.background = 'linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255))'
-       tecnicas.style.backgroundColor= '#211C1C'
+       
 }
 else if (localStorage.getItem("bluetheme") == "desligado") {
     corpo.style.background.Image= 'url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg)';
