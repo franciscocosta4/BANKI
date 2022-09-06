@@ -23,10 +23,13 @@ rel="stylesheet">
     <div>
         <h3> LOGIN:</h3>
         <div id='msgError'></div>
-        <div id='msgSuccess'></div> 
+        <div id='msgSuccess'></div>
+        <input type="text"  id="nome"  placeholder="name" required> 
         <input type="text"  id="gmail"  placeholder=" gmail" required>
         <input type="password" placeholder="senha" id="senha" required>
-        <button id="botao"  onclick='login()' >ENTRAR</button>
+        <button id="botao"  onclick='login(),savename()' >
+            ENTRAR 
+        </button>
     </div>
     <p>The gmail needs to have  more than 7 caracters.
         And the password needs to have more than 5 caracters.
@@ -35,7 +38,7 @@ rel="stylesheet">
 </body> 
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
-
+<script  src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
 <script src="/src/firebase-init.js" ></script>
    <script  src="/src/loginpage.js"></script>
    <script  src="/src/showusers.js"></script>

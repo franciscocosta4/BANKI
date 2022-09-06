@@ -88,26 +88,25 @@ function savegmail(gmailregistro) {
 }
 
 
-//*FUNCAO GUARDAR O NOME DO USUARIO NA DATABASE
-  function savename(nomeregistro) {
-  var nomeregistro = document.getElementById("nomeregistro").value;
-  //* save in database
-    //TODO  ADICIONAR O NOME NO  USUARIO >FEITO
-  firebase.database().ref('nomeconta').set({
-    nomeregistro,
-  });
- console.log('teu nome:',nomeregistro)
- //* prevent form from submitting
- return false;
-} 
+// //*FUNCAO GUARDAR O NOME DO USUARIO NA DATABASE
+//   function savename(nomeregistro) {
+//   var nomeregistro = document.getElementById("nomeregistro").value;
+//   //* save in database
+//     //!GUARDAR O NOME NA LOGIN PAGE
+//   firebase.database().ref('nomeconta').set({
+//     nomeregistro,
+//   });
+//  console.log('teu nome:',nomeregistro)
+//  //* prevent form from submitting
+//  return false;
+// } 
 
 //*FUNCAO GUARDAR O NOMES DOS AMIGOS/USUARIOS NA DATABASE
 function savefriendsname(nomeregistro) {
   var nomeregistro = document.getElementById("nomeregistro").value;
   //* save in database
-    //TODO  ADICIONAR O NOME NO  USUARIO >FEITO
   firebase.database().ref('nomes').push(
-    nomeregistro
+    nomeregistro,
   );
  console.log('nome na lista de usuarios:',nomeregistro)
  //* prevent form from submitting
@@ -135,6 +134,9 @@ firebase.auth().createUserWithEmailAndPassword(gmailregistro.value, senharegistr
   alert(errorMessage)
 });
 }
+
+
+
 
 
 

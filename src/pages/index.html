@@ -16,23 +16,23 @@ rel="stylesheet">
     <title>Document</title>
 </head>
 <body id="corpo"  >
-    <div class="nav">
+    <div class="nav" id="nav">
         <a href="" id="conta">
-            <img   id="imgtheme" src="/assets/outline_face_white_24dp.png" alt="theme">
+            
     </a>
-    <div class="nav-centro">
+    <div class="nav-centro" id="nav-centro">
         <a href="">
-            <img   id="imgtheme" src="/assets/bankilogo.png" alt="theme">
+            
          </a>
     </div>
-        <div class="nav-direita">
+        <div class="nav-direita" id="nav-direita">
             <a href="settings.html">
                 <img   id="imgtheme" src="/assets/outline_settings_white_24dp.png" alt="theme">
             </a>
         </div>
      </div>
-     <div class="friends">
-        <h3>FRIENDS</h3>
+     <h3>Friends</h3>
+     <div class="friends" id="friends">
         <p>
             Here are your friends:
         </p>
@@ -40,18 +40,21 @@ rel="stylesheet">
             
         </ul>
      </div>
-     <section class="funcoes">
+     <section class="funcoes" id="funcoes">
         
-         <button id="botaopedirajuda" >
-            ASK FOR SOME
-         </button>
+         <a id="pedirajuda" >
+            Ask for help
+         </a>
 
-         <button id="botaoajudar">
-             HELP SOMEONE
-         </button>
+         <a id="ajudar">
+             Help someone
+         </a>
       </section>
-     <footer class="documentacao">
+     <footer class="documentacao" id="documentacao">
         <a href="">NEED HELP WITH BANKI</a>
+        <button type="button" onclick="logout()">
+            LOG-OUT
+        </button>
      </footer>
 </body>
 <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
@@ -60,16 +63,35 @@ rel="stylesheet">
 <script  src="https://www.gstatic.com/firebasejs/9.6.7/firebase-database-compat.js"></script>
 <script    src="/src/script.js"></script>
 <script>
-   
     var corpo = window.document.getElementById('corpo')
-    
+    var friends = window.document.getElementById('friends');
+    var documentacao = window.document.getElementById('documentacao');
+    var funcoes= window.document.getElementById('funcoes');
+    var nav= window.document.getElementById('nav');
+    var navcentro= window.document.getElementById('nav-centro');
+    var navdireita= window.document.getElementById('nav-direita');
+
+   
+
     if (localStorage.getItem("bluetheme") == "ligado") {
        corpo.style.background = 'linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255))'
-      
-}
-else if (localStorage.getItem("bluetheme") == "desligado") {
-    corpo.style.background.Image= 'url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg)';
-   }
+       friends.style.backgroundImage = 'linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255))'
+       documentacao.style.backgroundColor= 'black'
+       funcoes.style.backgroundImage = 'linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255))'
+       nav.style.background = 'none'
+       console.log('bluetheme:',bluetheme)     
+     }
+     else if (localStorage.getItem("bluetheme") == "desligado") {
+       
+    //    corpo.style.background.Image= 'url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg)';
+    }
+
+    firebase.auth().onAuthStateChanged(user =>{
+  if(!user){
+    window.location.href= 'login.html'
+  }
+})
   
+
 </script>   
 </html>

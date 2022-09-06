@@ -44,14 +44,14 @@ section{
 
 /* BOTOES DE LOGIN E REGISTRO */
  section #botaologin{
-    background: rgba(255, 255, 255, 0.171) ;
+  background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);
     color: aliceblue;
     text-decoration: none; 
     display: block;
     text-align: center;
     margin: 30px auto;
-    width: 100px;
-    height: 30px;
+    width: 130px;
+    height: 60px;
     border-radius: 4px;
     border: none;
     box-shadow: rgba(92, 37, 194, 0.39) 0px 4px 16px;
@@ -62,15 +62,16 @@ section{
 }
 
 
+
  section #botaoregistro{
-    background: rgba(255, 255, 255, 0.171) ;
+  background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);
     color: aliceblue;
     text-decoration: none; 
     display: block;
     text-align: center;
     margin: 0px auto;
-    width: 100px;
-    height: 30px;
+    width: 130px;
+    height: 60px;
     border-radius: 4px;
     border: none;
     box-shadow: rgba(92, 37, 194, 0.39) 0px 4px 16px;
@@ -84,12 +85,11 @@ section{
     overflow: hidden;
     border-radius: 10px;
     /* background-color: #90B8B5 ; */
-    background: rgba(255, 255, 255, 0.171) ;
+    background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);
     /* box-shadow: rgba(92, 37, 194, 0.39) 0px 4px 16px; */
     animation: fadeIn 1s ease-in both;
     
 }
-
 
 .nav a {
     float: right;
@@ -98,6 +98,9 @@ section{
     text-decoration: none;
   }
 
+  .nav  #github{
+    float: left;
+  }
 
 
 .nav a:hover {

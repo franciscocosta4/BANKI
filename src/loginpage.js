@@ -73,12 +73,30 @@ botao.addEventListener('click', ()=>{
     console.log( 'validgmail:', gmail)
 
 })
+console.log('teu nome:',nome)
 
 
 
- //funcao de login  
+      //*FUNCAO GUARDAR O NOME DO USUARIO NA DATABASE
+      function savename(nome) {
+        var nome = document.getElementById("nome").value;
+        //* save in database
+          //!GUARDAR O NOME NA LOGIN PAGE
+        firebase.database().ref('nomeconta').set({
+          nome,
+        });
+       console.log('teu nome:',nome)
+       alert('Welcome:',nome)
+       //* prevent form from submitting
+       return false;
+      } 
+      
+       
+
+ //*funcao de login  
 
     function login() {  
+        
         console.log('antes')
         firebase.auth().signInWithEmailAndPassword(gmail.value, senha.value).then(response => {
             console.log('success', response)
@@ -96,5 +114,3 @@ botao.addEventListener('click', ()=>{
 
 
   
-      
-   
