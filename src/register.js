@@ -2,7 +2,7 @@ let gmailregistro = document.querySelector('#gmailregistro')
 let senharegistro = document.querySelector('#senharegistro')
 
 
-// MUDAR COR DA SENHA E  GMAIL SE FOR INVALIDO (KEYUP)
+// *MUDAR COR DA SENHA E  GMAIL SE FOR INVALIDO (KEYUP)
 
 gmailregistro.addEventListener('keyup', () => {
   if(gmailregistro.value.length <= 7){
@@ -44,7 +44,7 @@ senharegistro.addEventListener('keyup', () => {
 })
 
 
-// MUDAR COR DA SENHA E  GMAIL SE FOR INVALIDO (CLICK NO BOTAO)
+// *MUDAR COR DA SENHA E  GMAIL SE FOR INVALIDO (CLICK NO BOTAO)
 
 botao.addEventListener('click', ()=>{
   if(senharegistro.value.length <= 5){
@@ -71,6 +71,8 @@ botao.addEventListener('click', ()=>{
   console.log( 'gmailregistro:', gmailregistro)
 
 })
+
+
 //*FUNCAO GUardar O NOMES DO USUARIO NA DATABASE
 function savegmail(gmailregistro) {
   // *get variables
@@ -79,27 +81,13 @@ function savegmail(gmailregistro) {
   // *save in database
   firebase.database().ref('gmails').push(
     gmailregistro,
-  );
+    );
     //!ERRO ELE SUBSTITUI INVES DE ADICIONAR USUARIO //>RESOLVIDO
  console.log(nomeregistro)
-
   //* prevent form from submitting
   return false;
 }
 
-
-// //*FUNCAO GUARDAR O NOME DO USUARIO NA DATABASE
-//   function savename(nomeregistro) {
-//   var nomeregistro = document.getElementById("nomeregistro").value;
-//   //* save in database
-//     //!GUARDAR O NOME NA LOGIN PAGE
-//   firebase.database().ref('nomeconta').set({
-//     nomeregistro,
-//   });
-//  console.log('teu nome:',nomeregistro)
-//  //* prevent form from submitting
-//  return false;
-// } 
 
 //*FUNCAO GUARDAR O NOMES DOS AMIGOS/USUARIOS NA DATABASE
 function savefriendsname(nomeregistro) {
@@ -112,6 +100,8 @@ function savefriendsname(nomeregistro) {
  //* prevent form from submitting
  return false;
 }  
+
+
 
 //*FUNCAO REGISTRAR 
 function registrar(){
@@ -127,18 +117,11 @@ firebase.auth().createUserWithEmailAndPassword(gmailregistro.value, senharegistr
   
 })
 .catch((error) => {
-  var errorCode = error.code;
   var errorMessage = error.message;
   // *console logs
   console.log(errorMessage)
   alert(errorMessage)
 });
 }
-
-
-
-
-
-
 
 

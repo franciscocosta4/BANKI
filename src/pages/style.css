@@ -13,8 +13,8 @@
 
 
 :root{
-  --primary: rgba(0, 0, 0, 0.65);
-  --secundary: rgba(46, 3, 85, 0.65);
+  --primary: rgb(74, 7, 138);
+  --secundary: rgba(0, 0, 0, 0.65);
 }
 #corpo{
     /* background-image: url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg); */
@@ -34,7 +34,8 @@
     overflow: hidden;
     border-radius: 10px;
     /* background-color: #90B8B5 ; */
-    background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);
+    /* background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%); */
+    background-color: rgba(22, 22, 22, 0);
     color: aliceblue;
     
 }
@@ -52,16 +53,11 @@
     
   }
 
-  .nav-centro a {
-    border-radius: 3%;
-    padding: 13.5px 20px;
-    float: none;
-    position: absolute;
-    top: 5.6%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 26px;
-    height: 110px;
+  .nav-direita2 a {
+    margin: 5px auto ;
+    margin-right: 100px;
+    padding: 16px 21px;
+    float: right;
     
   }
 
@@ -106,13 +102,13 @@ h3{
 }
 .friends{
     overflow-y: scroll;
-    border-radius: 10px;
+    border-radius: 20px;
     /* background-color: #90B8B5 ; */
-    background: linear-gradient(180deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);   
+    /* background: linear-gradient(180deg, rgb(36, 16, 58) 00%, rgb(47, 11, 75) 100%);    */
+    background-color: rgb(27, 27, 27);
     animation: fadeIn 1s ease-in both;
-    
-    width: 92%;
-    height: 40%;
+    width: 97%;
+   height: 40%;  /** ATENCÃO - SÓ MUDA NA TELA DE PC  */
     float: none;
     margin: 10px auto;
 }
@@ -128,42 +124,46 @@ h3{
 
 
 .friends li{
-  
+ 
   color: white;
   font-family: mulish;
-  font-size: larger;
+  font-size: 15px;
   list-style-type: none;
-  text-align: center;
-  margin: 15px 0px;
-  padding:20px 0   ;
+  text-align:left;
+  margin: 10px 0px;
+  padding:20px 5px  ;
   width: 86%;
   border-radius: 8px;
-  background-color: rgb(26, 26, 26);
+  /* background-color: rgba(17, 17, 17, 0.89); */
+  background: linear-gradient(180deg, rgb(36, 16, 58) 100%, rgb(47, 11, 75) 0%);
   
 }
   /* SECAO FUNCOES  */
 
 .funcoes{
     overflow:none;
-    border-radius: 10px;
-    background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);
-    box-shadow: rgba(28, 2, 75, 0.295) 0px 4px 16px;  
+    border-radius: 30px;
+    /* background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%); */
+    background-color: rgba(22, 22, 22, 0.945);
+    box-shadow: rgba(47, 5, 51, 0.295) 0px 4px 16px;  
     animation: fadeIn 1s ease-in both;
-    width: 98%;
-    height: 10%;
+    width: 99%;
+    height: 13%;
     float: none;
-    margin: 10px auto;
+    margin: 0px auto;
+    margin-top: 0;
+
 }  
 
 .funcoes #pedirajuda {
   
-  padding:10px 10px ;
-  background-color: rgb(26, 26, 26);
+  padding:13px 10px ;
+  background: linear-gradient(180deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);
   border-radius: 8px;
   font-family: mulish;
     float: right;
     display: inline-flex;
-    margin: 7% 5%;
+    margin: 9% 5%;
     text-decoration: none;
     color: white;
    
@@ -171,13 +171,13 @@ h3{
 
 
   .funcoes #ajudar {
-    padding:10px 10px ;
-    background-color: rgb(26, 26, 26);
+    padding:13px 10px ;
+    background: linear-gradient(180deg, rgb(36, 16, 58) 00%, rgb(47, 11, 75) 100%);
     border-radius: 8px;
     font-family: mulish;
     float:left;
     display: inline-flex;
-    margin: 7% 5%;
+    margin: 9% 5%;
     text-decoration: none;
     color: white;
   }
@@ -193,7 +193,9 @@ h3{
 
 /* FOOTER 'NEED HELP WITH BANKI' */
 .documentacao {
-    overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
     border-radius: 10px;
     border: none;
     /* background-color: #90B8B5 ; */
@@ -201,22 +203,34 @@ h3{
     /* background-color: 6E3; */
     /* box-shadow: rgba(111, 0, 255, 0.295) 0px 4px 16px; */
     animation: fadeIn 1s ease-in both;
-    width: 79%;
-    height: 10%;
-    float: none;
-    margin: 70px auto;
+    width: 77%;
+    height: 13%;
+    margin: 20px auto;
 }
 
 .documentacao a {
-    float: none;
-    display: inline-flex;
-    margin: 30px 30px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     text-decoration: none;
     color: aliceblue;
     font-family: mulish;
 }
 
-
+.documentacao button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: mulish;
+  background-color: rgba(17, 17, 17, 0.747);
+  border: none;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  margin-left: 100px;
+  padding: 9px 10px;
+  width: 40%;
+}
 
 .documentacao :hover{
   background-color: rgb(255, 255, 255);
@@ -238,14 +252,17 @@ h3{
    .funcoes #pedirajuda{
     margin: 2% 5%;
    }
-
+    
+   .documentacao button{
+    margin-left: 130px;
+   }
 
 } 
 
 @media screen and (min-height:800px){
     .funcoes{
         margin: 30px auto;
-        height: 100px;
+        height: 10%;
     }  
     .friends{
         margin: 40px auto;
@@ -254,16 +271,17 @@ h3{
 
 
 @media screen and (min-width:800px){
-    .funcoes{
-        height: 80px;
-    }
+  .documentacao button{
+    margin-left: 300px;
+   }
+
 }
 
 @media screen and (max-width: 535px) {
   .friends{
     
     margin: 10px auto;
-    height: 50%;
+    height: 48%;
   }
   h3{
     margin: 10px 15px;

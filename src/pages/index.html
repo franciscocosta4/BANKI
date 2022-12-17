@@ -20,27 +20,27 @@ rel="stylesheet">
         <a href="" id="conta">
             
     </a>
-    <div class="nav-centro" id="nav-centro">
+    <div class="nav-direita" id="nav-direita">
+        <a href="settings.html">
+            <img   id="imgtheme" src="/assets/outline_settings_white_24dp.png" alt="theme">
+        </a>
+    <div class="nav-direita2" id='nav-direita2'>
         <a href="">
-            
+            <img id="imgtheme" src="/assets/baseline_account_circle_white_24dp.png" alt="account settings">
          </a>
-    </div>
-        <div class="nav-direita" id="nav-direita">
-            <a href="settings.html">
-                <img   id="imgtheme" src="/assets/outline_settings_white_24dp.png" alt="theme">
-            </a>
+        </div>
         </div>
      </div>
      <h3>Friends</h3>
-     <div class="friends" id="friends">
+     <div class="friends" id="friends" >
         <p>
             Here are your friends:
         </p>
-        <ul id="gmails">
+        <ul id="gmails" >
             
         </ul>
-     </div>
-     <section class="funcoes" id="funcoes">
+    </div>
+     <section class="funcoes" id="funcoes" align="center">
         
          <a id="pedirajuda" >
             Ask for help
@@ -51,9 +51,9 @@ rel="stylesheet">
          </a>
       </section>
      <footer class="documentacao" id="documentacao">
-        <a href="">NEED HELP WITH BANKI</a>
-        <button type="button" onclick="logout()">
-            LOG-OUT
+        <a href="" >NEED HELP WITH BANKI</a>
+        <button type="button" onclick="logout()" >
+            LOGOUT
         </button>
      </footer>
 </body>
@@ -68,7 +68,7 @@ rel="stylesheet">
     var documentacao = window.document.getElementById('documentacao');
     var funcoes= window.document.getElementById('funcoes');
     var nav= window.document.getElementById('nav');
-    var navcentro= window.document.getElementById('nav-centro');
+    var navdireita2= window.document.getElementById('nav-direita2');
     var navdireita= window.document.getElementById('nav-direita');
 
    
@@ -76,6 +76,7 @@ rel="stylesheet">
     if (localStorage.getItem("bluetheme") == "ligado") {
        corpo.style.background = 'linear-gradient(rgb(2, 77, 90), rgb(82, 206, 255))'
        friends.style.backgroundImage = 'linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255))'
+       ul.style.backgroundColor= 'rgb(27, 27, 27)'
        documentacao.style.backgroundColor= 'black'
        funcoes.style.backgroundImage = 'linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255))'
        nav.style.background = 'none'
@@ -83,12 +84,11 @@ rel="stylesheet">
      }
      else if (localStorage.getItem("bluetheme") == "desligado") {
        
-    //    corpo.style.background.Image= 'url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg)';
     }
 
     firebase.auth().onAuthStateChanged(user =>{
   if(!user){
-    window.location.href= 'login.html'
+    window.location.href= 'welcome.html'
   }
 })
   

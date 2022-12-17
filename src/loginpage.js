@@ -6,7 +6,7 @@ let msgSuccess= document.querySelector('#msgSuccess')
 
 
 
-// MUDAR COR DA SENHA E  GMAIL SE FOR INVALIDO (KEYUP)
+// *MUDAR COR DA SENHA E  GMAIL SE FOR INVALIDO (KEYUP)
 
 gmail.addEventListener('keyup', () => {
     if(gmail.value.length <= 7){
@@ -46,7 +46,7 @@ senha.addEventListener('keyup', () => {
 })
 
 
-// MUDAR COR DA SENHA E  GMAIL SE FOR INVALIDO (CLICK NO BOTAO)
+// *MUDAR COR DA SENHA E  GMAIL SE FOR INVALIDO (CLICK NO BOTAO)
 
 botao.addEventListener('click', ()=>{
     if(senha.value.length <= 5){
@@ -73,25 +73,23 @@ botao.addEventListener('click', ()=>{
     console.log( 'validgmail:', gmail)
 
 })
-console.log('teu nome:',nome)
 
 
 
-      //*FUNCAO GUARDAR O NOME DO USUARIO NA DATABASE
-      function savename(nome) {
-        var nome = document.getElementById("nome").value;
-        //* save in database
-          //!GUARDAR O NOME NA LOGIN PAGE
+ //*FUNCAO GUARDAR O NOME DO USUARIO NA DATABASE
+function savename(nome) {
+    var nome = document.getElementById("nome").value;
+    //* save in database
         firebase.database().ref('nomeconta').set({
-          nome,
-        });
-       console.log('teu nome:',nome)
-       alert('Welcome:',nome)
-       //* prevent form from submitting
-       return false;
-      } 
-      
-       
+         nome,
+         });
+        console.log('teu nome:',nome)
+        alert('Welcome:',nome)
+        console.log( 'nomeconta:', nome)
+    //* prevent form from submitting
+            return false; 
+          } 
+
 
  //*funcao de login  
 
@@ -100,17 +98,21 @@ console.log('teu nome:',nome)
         console.log('antes')
         firebase.auth().signInWithEmailAndPassword(gmail.value, senha.value).then(response => {
             console.log('success', response)
-            window.location.href= 'index.html'
-            // window.location.href= 'index.html'
+             window.location.href= 'index.html'
         }).catch(error => {
             alert(error)
             console.log('error', error)
             console.log('erro na firebase  ')
-
-
         });
         console.log('depois')
-    } 
-
+         console.log( 'nomeconta:', nome)
+        //* funcao mostrar erro se houver 
+    .catch((error) => {
+        var errorMessage = error.message;
+        // *console logs
+        console.log( 'error :',errorMessage)
+        alert('An error was found : ',errorMessage)
+      });
+      }
 
   

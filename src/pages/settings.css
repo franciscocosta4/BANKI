@@ -10,7 +10,7 @@ a{
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 26px;
-    background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);
+    background: linear-gradient(180deg, rgb(36, 16, 58) 00%, rgb(47, 11, 75) 100%);
     
 }
 
@@ -28,7 +28,7 @@ button{
     margin: 120px auto;
     font-size: 20px;
     padding-right: 60px;
-    background: linear-gradient(90deg, rgb(36, 16, 58) 0%, rgb(47, 11, 75) 100%);
+    background: linear-gradient(180deg, rgb(36, 16, 58) 00%, rgb(47, 11, 75) 100%);
     border: none;
     border-radius: 10px;
     /* align-items: center; */
@@ -41,8 +41,26 @@ button #imgtheme{
     
 }
 
-#corpo{
-    background:url(https://cdn.wallpapersafari.com/92/76/PbD56R.jpg) ;
-    height: 800px;
+
+
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -20%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
 }
-  
+
+
+#corpo{
+    background: linear-gradient(135deg, rgb(74, 7, 138), rgba(0, 0, 0, 0.65));
+    height: 900px;
+   
+}
+
+
