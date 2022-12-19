@@ -17,6 +17,8 @@ firebase.database().ref("nomes").on("child_added",function(snapshot)  {
     console.log("an error was detected:" )
   }
 
+  
+
  });
 
  // *MOSTRAR NOME DO USUARIO NA TELA 

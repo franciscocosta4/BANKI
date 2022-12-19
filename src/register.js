@@ -73,7 +73,7 @@ botao.addEventListener('click', ()=>{
 })
 
 
-//*FUNCAO GUardar O NOMES DO USUARIO NA DATABASE
+//* FUNCAO GUardar O gmails DO USUARIO NA DATABASE
 function savegmail(gmailregistro) {
   // *get variables
   var gmailregistro = document.getElementById("gmailregistro").value;
@@ -97,6 +97,7 @@ function savefriendsname(nomeregistro) {
     nomeregistro,
   );
  console.log('nome na lista de usuarios:',nomeregistro)
+ alert(nomeregistro)
  //* prevent form from submitting
  return false;
 }  

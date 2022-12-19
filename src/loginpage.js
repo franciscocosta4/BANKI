@@ -85,7 +85,6 @@ function savename(nome) {
          });
         console.log('teu nome:',nome)
         alert('Welcome:',nome)
-        console.log( 'nomeconta:', nome)
     //* prevent form from submitting
             return false; 
           } 
