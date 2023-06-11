@@ -113,7 +113,6 @@ firebase.auth().createUserWithEmailAndPassword(gmailregistro.value, senharegistr
   //*console logs
   console.log(userCredential)
   console.log(' redirecionando para home')
-  alert('registrado com sucesso')
   window.location.href= 'login.html'
   
 })
@@ -124,5 +123,6 @@ firebase.auth().createUserWithEmailAndPassword(gmailregistro.value, senharegistr
   alert(errorMessage)
 });
 }
+
 
 
